@@ -1,9 +1,9 @@
 # User Goodness Website
 
-The USer Goodness website is a responsive website that utilizes:
+The User Goodness website is a responsive website that utilizes:
 
-* FontAwesome
-* jQuery
+* [FontAwesome](http://fontawesome.io/)
+* [jQuery](https://jquery.com/)
 * [SASS](http://sass-lang.com/) (Syntactically Awesome Style Sheets)
 
 The website is built keeping in mind:
