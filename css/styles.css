@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* Browser Reset */
+html, body, form, nav, ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+.wrap {
+  width: 90%;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  display: block;
+  height: auto;
+  overflow: hidden; }
+
+video {
+  display: block; }
+
+/* For IE9 */
+a img {
+  border: none; }
+
+/* For Chrome & Firefox */
+*:focus {
+  outline: 0; }
+
+textarea:focus, input:focus {
+  outline: 0; }
+
+a:hover, a:active, a:focus {
+  outline: 0; }
+
+/* SETTINGS – used with preprocessors and contain font, colors definitions, etc. */
+body {
+  font-family: Helvetica, Arial, sans; }
+
+/* TOOLS – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers. */
+/* GENERIC – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS. */
+/* ELELEMENTS – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here. */
+/* ObJECTS – class-based selectors which define undecorated design patterns, for example media object known from OOCSS */
+/* COMPONENTS – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components */
+/* UTILITIES – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class */
+
+/*# sourceMappingURL=styles.css.map */
