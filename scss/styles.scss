@@ -1,71 +1,171 @@
-// Media Queries 
-@mixin mq($dim) {
-	@if $dim == desktop {
-		@media (min-width: 1024px) { @content; }
-	}
-	@else if $dim == tablet {
-		@media (min-width: 768px)  { @content; }
-	}
+// Settings – font, colors definitions, etc.
+@import "_partials/ui";
+
+//Tools – globally used mixins and functions
+@import "_partials/mixins";
+
+//Generic – reset and/or normalize styles, box-sizing definition, etc.
+@import "_partials/reset";
+
+//Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+h2 {
+	margin-bottom: 50px;
+}
+p {
+	line-height: 125%;
 }
 
-// Browser Prefixing Shorthand
-@mixin prefix($property, $value) {
-        -webkit-#{$property}: $value;
-        -moz-#{$property}: $value;
-        -ms-#{$property}: $value;
-        -o-#{$property}: $value;
-}
-
-/* Browser Reset */
-html, body, form, nav, ul {
-    display: block;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-.wrap {
+//Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+.header-wrapper {
+	max-width: 800px;
 	width: 90%;
-	margin-top: 0;
-	margin-right: auto;
-	margin-bottom: 0;
-	margin-left: auto;
-	display: block;
-	height: auto;
+	padding: 10px 5%;
 	overflow: hidden;
+    margin: 0 auto;
 }
-video {
-	display: block;
-} 
-
-/* For IE9 */
-a img {
-    border: none;    
+.section-wrapper {
+	max-width: 800px;
+	width: 90%;
+	padding: 60px 5%;
+	overflow: hidden;
+    margin: 0 auto;
+}
+section:nth-child(even) {
+	background: #efefef;
+}
+header {
+	padding: 10px 5%;
+	overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    background: #fff;
+    width: 90%;
+    border-bottom: 1px solid #000;
+	h1 {
+		display: block;
+		@include mq(tablet){
+			float: left;
+			display: inline-block;
+		}
+		margin: 0;
+	}
+	ul {
+		@include mq(tablet){
+			float: right;
+		}
+		margin: 0 auto;
+		list-style-type: none;
+		overflow: hidden;
+		li {
+			display: inline-block;
+			padding: 0 10px;
+		}
+	}
+}
+#hero {
+	padding-top: 50px;
+	p {
+		line-height: 150%;
+	}
+}
+#services {
+	ul {
+		list-style-type: none;
+		width: 100%;
+		overflow: hidden;
+		li:nth-child(odd) {
+			padding-right: 0;
+		 	@include mq(tablet){
+		 		padding-right: 6%;
+		 	}
+		}
+		li {
+			width: 100%;
+			display: inline-block;
+			float: left;
+			text-align: left;
+			padding: 0 0 50px 0;
+			@include mq(tablet){
+		 		width: 47%;
+		 	}
+			h3 {
+				margin: 10px 0 0 0;
+			}
+			img {
+				width: 100px;
+				height: 100px;
+				float: left;
+				padding: 0 20px 0 0;
+			}
+			p {
+				margin: 0;
+			}
+		}
+	}
+}
+.bio-container {
+	padding: 20px 0;
+	overflow: hidden;
+	img {
+		display: inline-block;
+		width: 100%;
+		@include mq(tablet){
+	 		width: 30%;
+	 	}
+		max-width: 150px;
+		height: auto;
+		border-radius: 100px;
+		float: initial;
+	}
+	p {
+		display: inline-block;
+		text-align: left;
+		width: 100%;
+		@include mq(tablet){
+	 		width: 65%;
+	 	}
+		padding: 0 0 0 5%;
+		line-height: 150%;
+		float: initial;
+	}
+}
+#footer {
+	.footer-left {
+		text-align: left;
+		width: 100%;
+		float: left;
+		padding: 0 0 20px 0;
+		@include mq(tablet){
+	 		width: 50%;
+	 	}
+	 	select, textarea, input {
+	 		width: 90%;
+	 		max-width: 600px;
+	 		min-height: 35px;
+	 		border: 1px solid #000;
+	 		margin: 0 0 10px 0;
+	 		resize: none;
+	 		display: block;
+	 		float: left;
+	 	}
+	}
+	.footer-right {
+		@include mq(tablet){
+	 		text-align: left;
+	 	}
+		width: 100%;
+		float: left;
+		padding: 0 0 20px 0;
+		@include mq(tablet){
+	 		width: 50%;
+	 	}
+	}
+	.fa {
+		font-size: 32px;
+	}
 }
 
-/* For Chrome & Firefox */
-*:focus {
-    outline: 0;
-}
-textarea:focus, input:focus{
-    outline: 0;
-}
-a:hover, a:active, a:focus {
-	outline: 0;
-}
+//Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
 
-/* SETTINGS – used with preprocessors and contain font, colors definitions, etc. */
-body {
-	font-family: Helvetica, Arial, sans;
-}
 
-/* TOOLS – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers. */
-
-/* GENERIC – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS. */
-
-/* ELELEMENTS – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here. */
-
-/* ObJECTS – class-based selectors which define undecorated design patterns, for example media object known from OOCSS */
-
-/* COMPONENTS – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components */
-
-/* UTILITIES – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class */
+//Trumps – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
