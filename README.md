@@ -1,6 +1,6 @@
 # User Goodness Website
 
-The User Goodness website is a responsive website that utilizes:
+The [User Goodness website](http://www.usergoodness.com) is a responsive website that utilizes:
 
 * [FontAwesome](http://fontawesome.io/)
 * Vanilla JavaScript
