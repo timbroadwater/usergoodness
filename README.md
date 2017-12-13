@@ -3,7 +3,7 @@
 The [User Goodness website](http://www.usergoodness.org) is a responsive website that utilizes:
 
 * [FontAwesome](http://fontawesome.io/)
-* Vanilla JavaScript
+* jQuery
 * [SASS](http://sass-lang.com/) (Syntactically Awesome Style Sheets)
 
 The website is built keeping in mind:
