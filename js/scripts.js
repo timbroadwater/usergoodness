@@ -6,7 +6,7 @@ $(document).ready(function(){
 	myQuotes[1] = "Good user experience design is something that too few companied do. -Laua Klein"; 
 	myQuotes[2] = "When you're focusing on just the conversion rates, and not the affect on your customer's mind, that's when problems occur. -Harry Brignull"; 
 	myQuotes[3] = "Pay attention to what users do, not what they say... users do not know what they want. -Jakob Nielsen"; 
-	myQuotes[4] = "It is a capital mistake to theorize before one has data. insensibly one begins to twist facts to suit theories, instead of theories to suit facts. -Sherlock Holmes"; 
+	myQuotes[4] = "It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts. -Sherlock Holmes"; 
 	myQuotes[5] = "The hardest part of UX Design, taking that step back... and focusing on that problem space. -Smitha Prasadh"; 
 	myQuotes[6] = "I fight for the users! -Tron"; 
 	myQuotes[7] = "Only those who dare to fail greatly can ever achieve greatly. -Robert F. Kennedy"; 
@@ -16,4 +16,46 @@ $(document).ready(function(){
 	var myRandom = Math.floor(Math.random()*myQuotes.length); 
 	$(".message").text( myQuotes[myRandom ] );
 
+});
+
+// Floating Nav
+$(window).on('scroll', function() {
+    var scrollTop = $(this).scrollTop();
+    var nav = $('header');
+
+    $('#hero').each(function() {
+        var topDistance = $(this).offset().top;
+
+        if ( (topDistance) < scrollTop ) {
+                    {
+            nav.css({
+                boxShadow: '0 5px 25px rgba(0,0,0,0.33)',             
+	            });
+	        }
+        }
+        else if ( (topDistance) > scrollTop ) {
+                    {
+            nav.css({
+                boxShadow: '0 0 0 rgba(0,0,0,0)',             
+	            });
+	        }
+        }
+    });
+});
+
+// Smooth Scrolling for Anchors With Offset
+jQuery(function() {
+  jQuery('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+      var target = jQuery(this.hash);
+      target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        jQuery('html,body').animate({
+          scrollTop: target.offset().top -100
+        }, 1000);
+        return false;
+      }
+    }
+  });
 });

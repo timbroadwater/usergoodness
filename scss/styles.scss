@@ -8,9 +8,6 @@
 @import "_partials/reset";
 
 //Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
-h2 {
-	margin-bottom: 50px;
-}
 p {
 	line-height: 125%;
 }
@@ -31,16 +28,19 @@ p {
     margin: 0 auto;
 }
 section:nth-child(even) {
-	background: #efefef;
+	background: $yellow;
 }
 header {
+	transition: box-shadow 0.33s linear;
 	padding: 10px 5%;
 	overflow: hidden;
     position: fixed;
     z-index: 2;
     background: #fff;
     width: 90%;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $grey;
+	text-align: center;
+	top: 0;
 	h1 {
 		display: block;
 		@include mq(tablet){
@@ -48,12 +48,17 @@ header {
 			display: inline-block;
 		}
 		margin: 0;
+		img {
+			max-width: 250px;
+			width: 100%;
+			height: auto;
+		}
 	}
 	ul {
 		@include mq(tablet){
 			float: right;
 		}
-		margin: 0 auto;
+		margin: 5px auto 0 auto;
 		list-style-type: none;
 		overflow: hidden;
 		li {
@@ -63,16 +68,39 @@ header {
 	}
 }
 #hero {
-	padding-top: 50px;
-	p {
-		line-height: 150%;
+	margin-top: 80px;
+	.definition {
+		h2 {
+			color: $grey;
+		}
+		text-align: left;
+		p {
+			line-height: 150%;
+			text-align: left;
+		}
+		ol {
+			font-size: 1.15em;
+			line-height: 150%;
+			text-align: left;
+			margin: 0 0 0 20px;
+			padding: 0;
+			li {
+				margin: 0;
+				padding: 0 0 20px 0;
+			}
+		}
 	}
 }
 #services {
+	text-align: center;
+	h2 {
+		margin-bottom: 50px;
+	}
 	ul {
 		list-style-type: none;
 		width: 100%;
 		overflow: hidden;
+		text-align: left;
 		li:nth-child(odd) {
 			padding-right: 0;
 		 	@include mq(tablet){
@@ -90,10 +118,15 @@ header {
 		 	}
 			h3 {
 				margin: 10px 0 0 0;
+				color: $grey;
 			}
 			img {
-				width: 100px;
-				height: 100px;
+				width: 75px;
+				height: 75px;
+				@include mq(tablet){
+			 		width: 100px;
+					height: 100px;
+			 	}
 				float: left;
 				padding: 0 20px 0 0;
 			}
@@ -103,33 +136,61 @@ header {
 		}
 	}
 }
-.bio-container {
-	padding: 20px 0;
-	overflow: hidden;
-	img {
-		display: inline-block;
-		width: 100%;
+#bio {
+	text-align: center;
+	.bio-container {
+		padding: 20px 0;
+		overflow: hidden;
+		text-align: center;
 		@include mq(tablet){
-	 		width: 30%;
+	 		text-align: left;
 	 	}
-		max-width: 150px;
-		height: auto;
-		border-radius: 100px;
-		float: initial;
-	}
-	p {
-		display: inline-block;
-		text-align: left;
-		width: 100%;
-		@include mq(tablet){
-	 		width: 65%;
-	 	}
-		padding: 0 0 0 5%;
-		line-height: 150%;
-		float: initial;
+	 	.bio-container-left {
+	 		text-align: center;
+	 		display: inline-block;
+			width: 100%;
+			float: initial;
+			@include mq(tablet){
+		 		width: 30%;
+		 		float: left;
+		 	}
+			img {
+				width: 100%;
+				max-width: 150px;
+				height: auto;
+				border-radius: 100px;
+			}
+		}
+		.bio-container-right {
+			display: inline-block;
+			width: 100%;
+			float: initial;
+			@include mq(tablet){
+		 		width: 70%;
+		 		float: left;
+		 	}
+			h3 {
+				text-align: center;
+				color: $grey;
+				@include mq(tablet){
+			 		text-align: left;
+			 	}
+			}
+			p {
+				display: inline-block;
+				text-align: left;
+				width: 100%;
+				line-height: 150%;
+			}
+			.fa {
+				font-size: 32px;
+				color: $grey;
+			}		 	
+		}
 	}
 }
 #footer {
+	text-align: center;
 	.footer-left {
 		text-align: left;
 		width: 100%;
@@ -162,8 +223,17 @@ header {
 	}
 	.fa {
 		font-size: 32px;
+		color: $grey;
 	}
 }
+#quote {
+	text-align: center;
+	.message {
+		width: 100%;
+		font-style: italic;
+	}
+}
+
 
 //Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
 

@@ -4,8 +4,7 @@ body {
 html, body, section, form, nav, ul {
   display: block;
   margin: 0;
-  padding: 0;
-  text-align: center; }
+  padding: 0; }
 
 .wrap {
   width: 90%;
@@ -34,9 +33,6 @@ textarea:focus, input:focus {
 a:hover, a:active, a:focus {
   outline: 0; }
 
-h2 {
-  margin-bottom: 50px; }
-
 p {
   line-height: 125%; }
 
@@ -55,16 +51,19 @@ p {
   margin: 0 auto; }
 
 section:nth-child(even) {
-  background: #efefef; }
+  background: #f5c17e; }
 
 header {
+  transition: box-shadow 0.33s linear;
   padding: 10px 5%;
   overflow: hidden;
   position: fixed;
   z-index: 2;
   background: #fff;
   width: 90%;
-  border-bottom: 1px solid #000; }
+  border-bottom: 1px solid #515151;
+  text-align: center;
+  top: 0; }
   header h1 {
     display: block;
     margin: 0; }
@@ -72,8 +71,12 @@ header {
       header h1 {
         float: left;
         display: inline-block; } }
+    header h1 img {
+      max-width: 250px;
+      width: 100%;
+      height: auto; }
   header ul {
-    margin: 0 auto;
+    margin: 5px auto 0 auto;
     list-style-type: none;
     overflow: hidden; }
     @media (min-width: 768px) {
@@ -84,90 +87,145 @@ header {
       padding: 0 10px; }
 
 #hero {
-  padding-top: 50px; }
-  #hero p {
-    line-height: 150%; }
+  margin-top: 80px; }
+  #hero .definition {
+    text-align: left; }
+    #hero .definition h2 {
+      color: #515151; }
+    #hero .definition p {
+      line-height: 150%;
+      text-align: left; }
+    #hero .definition ol {
+      font-size: 1.15em;
+      line-height: 150%;
+      text-align: left;
+      margin: 0 0 0 20px;
+      padding: 0; }
+      #hero .definition ol li {
+        margin: 0;
+        padding: 0 0 20px 0; }
 
-#services ul {
-  list-style-type: none;
-  width: 100%;
-  overflow: hidden; }
-  #services ul li:nth-child(odd) {
-    padding-right: 0; }
-    @media (min-width: 768px) {
-      #services ul li:nth-child(odd) {
-        padding-right: 6%; } }
-  #services ul li {
+#services {
+  text-align: center; }
+  #services h2 {
+    margin-bottom: 50px; }
+  #services ul {
+    list-style-type: none;
     width: 100%;
-    display: inline-block;
-    float: left;
-    text-align: left;
-    padding: 0 0 50px 0; }
-    @media (min-width: 768px) {
-      #services ul li {
-        width: 47%; } }
-    #services ul li h3 {
-      margin: 10px 0 0 0; }
-    #services ul li img {
-      width: 100px;
-      height: 100px;
+    overflow: hidden;
+    text-align: left; }
+    #services ul li:nth-child(odd) {
+      padding-right: 0; }
+      @media (min-width: 768px) {
+        #services ul li:nth-child(odd) {
+          padding-right: 6%; } }
+    #services ul li {
+      width: 100%;
+      display: inline-block;
       float: left;
-      padding: 0 20px 0 0; }
-    #services ul li p {
-      margin: 0; }
+      text-align: left;
+      padding: 0 0 50px 0; }
+      @media (min-width: 768px) {
+        #services ul li {
+          width: 47%; } }
+      #services ul li h3 {
+        margin: 10px 0 0 0;
+        color: #515151; }
+      #services ul li img {
+        width: 75px;
+        height: 75px;
+        float: left;
+        padding: 0 20px 0 0; }
+        @media (min-width: 768px) {
+          #services ul li img {
+            width: 100px;
+            height: 100px; } }
+      #services ul li p {
+        margin: 0; }
 
-.bio-container {
-  padding: 20px 0;
-  overflow: hidden; }
-  .bio-container img {
-    display: inline-block;
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 100px;
-    float: initial; }
+#bio {
+  text-align: center; }
+  #bio .bio-container {
+    padding: 20px 0;
+    overflow: hidden;
+    text-align: center; }
     @media (min-width: 768px) {
-      .bio-container img {
-        width: 30%; } }
-  .bio-container p {
-    display: inline-block;
+      #bio .bio-container {
+        text-align: left; } }
+    #bio .bio-container .bio-container-left {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      float: initial; }
+      @media (min-width: 768px) {
+        #bio .bio-container .bio-container-left {
+          width: 30%;
+          float: left; } }
+      #bio .bio-container .bio-container-left img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        border-radius: 100px; }
+    #bio .bio-container .bio-container-right {
+      display: inline-block;
+      width: 100%;
+      float: initial; }
+      @media (min-width: 768px) {
+        #bio .bio-container .bio-container-right {
+          width: 70%;
+          float: left; } }
+      #bio .bio-container .bio-container-right h3 {
+        text-align: center;
+        color: #515151; }
+        @media (min-width: 768px) {
+          #bio .bio-container .bio-container-right h3 {
+            text-align: left; } }
+      #bio .bio-container .bio-container-right p {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        line-height: 150%; }
+      #bio .bio-container .bio-container-right .fa {
+        font-size: 32px;
+        color: #515151; }
+
+#footer {
+  text-align: center; }
+  #footer .footer-left {
     text-align: left;
     width: 100%;
-    padding: 0 0 0 5%;
-    line-height: 150%;
-    float: initial; }
+    float: left;
+    padding: 0 0 20px 0; }
     @media (min-width: 768px) {
-      .bio-container p {
-        width: 65%; } }
+      #footer .footer-left {
+        width: 50%; } }
+    #footer .footer-left select, #footer .footer-left textarea, #footer .footer-left input {
+      width: 90%;
+      max-width: 600px;
+      min-height: 35px;
+      border: 1px solid #000;
+      margin: 0 0 10px 0;
+      resize: none;
+      display: block;
+      float: left; }
+  #footer .footer-right {
+    width: 100%;
+    float: left;
+    padding: 0 0 20px 0; }
+    @media (min-width: 768px) {
+      #footer .footer-right {
+        text-align: left; } }
+    @media (min-width: 768px) {
+      #footer .footer-right {
+        width: 50%; } }
+  #footer .fa {
+    font-size: 32px;
+    color: #515151; }
 
-#footer .footer-left {
-  text-align: left;
-  width: 100%;
-  float: left;
-  padding: 0 0 20px 0; }
-  @media (min-width: 768px) {
-    #footer .footer-left {
-      width: 50%; } }
-  #footer .footer-left select, #footer .footer-left textarea, #footer .footer-left input {
-    width: 90%;
-    max-width: 600px;
-    min-height: 35px;
-    border: 1px solid #000;
-    margin: 0 0 10px 0;
-    resize: none;
-    display: block;
-    float: left; }
-#footer .footer-right {
-  width: 100%;
-  float: left;
-  padding: 0 0 20px 0; }
-  @media (min-width: 768px) {
-    #footer .footer-right {
-      text-align: left; } }
-  @media (min-width: 768px) {
-    #footer .footer-right {
-      width: 50%; } }
-#footer .fa {
-  font-size: 32px; }
+#quote {
+  text-align: center; }
+  #quote .message {
+    width: 100%;
+    font-style: italic; }
 
 /*# sourceMappingURL=styles.css.map */
