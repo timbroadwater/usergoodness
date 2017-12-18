@@ -38,10 +38,14 @@ p {
 
 .header-wrapper {
   max-width: 800px;
-  width: 90%;
-  padding: 10px 5%;
+  width: 100%;
+  padding: 0;
   overflow: hidden;
   margin: 0 auto; }
+  @media (min-width: 768px) {
+    .header-wrapper {
+      width: 90%;
+      padding: 10px 5%; } }
 
 .section-wrapper {
   max-width: 800px;
@@ -55,15 +59,19 @@ section:nth-child(even) {
 
 header {
   transition: box-shadow 0.33s linear;
-  padding: 10px 5%;
   overflow: hidden;
   position: fixed;
   z-index: 2;
   background: #fff;
-  width: 90%;
   border-bottom: 1px solid #515151;
   text-align: center;
-  top: 0; }
+  top: 0;
+  padding: 10px 0;
+  width: 100%; }
+  @media (min-width: 768px) {
+    header {
+      padding: 10px 5%;
+      width: 90%; } }
   header h1 {
     display: block;
     margin: 0; }
@@ -84,7 +92,10 @@ header {
         float: right; } }
     header ul li {
       display: inline-block;
-      padding: 0 10px; }
+      padding: 0 3px; }
+      @media (min-width: 768px) {
+        header ul li {
+          padding: 0 10px; } }
 
 #hero {
   margin-top: 80px; }
@@ -188,6 +199,17 @@ header {
       #bio .bio-container .bio-container-right .fa {
         font-size: 32px;
         color: #515151; }
+
+#nonprofits p, #contact p, #mission p {
+  line-height: 150%; }
+#nonprofits ol, #nonprofits ul, #contact ol, #contact ul, #mission ol, #mission ul {
+  line-height: 150%;
+  text-align: left;
+  margin: 0 0 0 20px;
+  padding: 0; }
+  #nonprofits ol li, #nonprofits ul li, #contact ol li, #contact ul li, #mission ol li, #mission ul li {
+    margin: 0;
+    padding: 0 0 20px 0; }
 
 #footer {
   text-align: center; }

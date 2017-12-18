@@ -15,10 +15,14 @@ p {
 //Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
 .header-wrapper {
 	max-width: 800px;
-	width: 90%;
-	padding: 10px 5%;
+	width: 100%;
+	padding: 0;
 	overflow: hidden;
     margin: 0 auto;
+    @include mq(tablet){
+		width: 90%;
+		padding: 10px 5%;
+	}
 }
 .section-wrapper {
 	max-width: 800px;
@@ -32,15 +36,19 @@ section:nth-child(even) {
 }
 header {
 	transition: box-shadow 0.33s linear;
-	padding: 10px 5%;
 	overflow: hidden;
     position: fixed;
     z-index: 2;
     background: #fff;
-    width: 90%;
     border-bottom: 1px solid $grey;
 	text-align: center;
 	top: 0;
+	padding: 10px 0;
+	width: 100%;
+	@include mq(tablet){
+		padding: 10px 5%;
+		width: 90%;
+	}
 	h1 {
 		display: block;
 		@include mq(tablet){
@@ -63,7 +71,10 @@ header {
 		overflow: hidden;
 		li {
 			display: inline-block;
-			padding: 0 10px;
+			padding: 0 3px;
+			@include mq(tablet){
+				padding: 0 10px;
+			}
 		}
 	}
 }
@@ -189,6 +200,22 @@ header {
 		}
 	}
 }
+#nonprofits, #contact, #mission {
+	p {
+		line-height: 150%;
+	}
+	ol, ul {
+		line-height: 150%;
+		text-align: left;
+		margin: 0 0 0 20px;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0 0 20px 0;
+		}
+	}
+}
+
 #footer {
 	text-align: center;
 	.footer-left {
