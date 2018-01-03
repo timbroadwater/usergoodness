@@ -42,3 +42,12 @@ $(window).on('scroll', function() {
         }
     });
 });
+
+// iFrame Height Resizing
+function resizeIframe(iframeID) 
+{   
+    var iframe = window.parent.document.getElementById(iframeID);
+    var container = document.getElementById('iframeform');
+    iframe.style.height = container.offsetHeight + 'px'; 
+
+}
