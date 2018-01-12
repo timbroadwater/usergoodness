@@ -8,13 +8,13 @@
 @import "_partials/reset";
 
 //Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
-p {
-	line-height: 125%;
+p, ol, ul {
+	line-height: 150%;
 }
 
 //Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
 .header-wrapper {
-	max-width: 800px;
+	max-width: 1280px;
 	width: 100%;
 	padding: 0;
 	overflow: hidden;
@@ -25,11 +25,24 @@ p {
 	}
 }
 .section-wrapper {
-	max-width: 800px;
+	max-width: 1280px;
 	width: 90%;
-	padding: 60px 5%;
+	padding: 30px 5%;
 	overflow: hidden;
     margin: 0 auto;
+    @include mq(tablet){
+		padding: 60px 5%;
+	}
+}
+.section-wrapper2 {
+	max-width: 800px;
+	width: 90%;
+	padding: 30px 5%;
+	overflow: hidden;
+    margin: 0 auto;
+    @include mq(tablet){
+		padding: 60px 5%;
+	}
 }
 header {
 	transition: box-shadow 0.33s linear;
@@ -75,22 +88,37 @@ header {
 		}
 	}
 }
+
 #hero {
 	margin-top: 80px;
-	background: $orange;
-	.definition {
+	background: url(../img/honeycomb.png) repeat $orange;
+	background-size: 300px;
+	background-position: center center;
+	text-align: center;
 		h2 {
 			color: $white;
+			text-shadow: 0px 2px #906301;
+			font-size: 36px;
+			letter-spacing: 1px;
+			word-spacing: 1px;
 		}
+		.homepage {
+			font-size: 24px;
+			@include mq(tablet){
+				font-size: 36px;
+			}
+			.yellow {
+				color: #ffff77;
+			}
+		}
+	.definition {
 		text-align: left;
 		p {
-			line-height: 150%;
 			text-align: left;
 			color: $darkgrey;
 		}
 		ol {
 			font-size: 1.15em;
-			line-height: 150%;
 			text-align: left;
 			margin: 0 0 0 20px;
 			padding: 0;
@@ -128,30 +156,46 @@ header {
 			@include mq(tablet){
 		 		width: 47%;
 		 	}
-			h3 {
-				margin: 10px 0 0 0;
-				color: $orange;
-			}
-			img {
-				width: 75px;
-				height: 75px;
-				@include mq(tablet){
-			 		width: 100px;
-					height: 100px;
-			 	}
-				float: left;
-				padding: 0 20px 0 0;
-			}
-			p {
-				margin: 0;
-				color: $darkgrey;
+		 	.li-left {
+		 		display: inline-block;
+		 		float: left;
+		 		width: 20%;
+		 		@include mq(tablet) {
+		 			width: 30%;
+		 		}
+				img {
+					float: left;
+					padding: 0;
+					width: 100%;
+					height: auto;
+				}
+		 	}
+		 	.li-right {
+		 		display: inline-block;
+		 		float: left;
+		 		width: 75%;
+		 		padding: 0 0 0 3%;
+		 		@include mq(tablet) {
+		 			width: 65%;
+		 		}
+				h3 {
+					margin: 0;
+					color: $orange;
+				}
+				.green {
+					color: $green;
+				}
+				p {
+					margin: 0;
+					color: $darkgrey;
+				}
 			}
 		}
 	}
 }
 #bio {
 	text-align: center;
-	background: $green;
+	background: url(../img/honeycomb2.png) repeat $green;
 	h2 {
 		color: darken($green, 30%);
 	}
@@ -189,6 +233,7 @@ header {
 			h3 {
 				text-align: center;
 				color: $white;
+				margin: 0;
 				@include mq(tablet){
 			 		text-align: left;
 			 	}
@@ -197,11 +242,11 @@ header {
 				display: inline-block;
 				text-align: left;
 				width: 100%;
-				line-height: 150%;
 				color: $darkgrey;
 			}
 			a {
 				color: $greenlink;
+				white-space: nowrap;
 			}
 			.fa {
 				font-size: 32px;
@@ -212,11 +257,9 @@ header {
 }
 #nonprofits, #contact, #mission {
 	p {
-		line-height: 150%;
 		color: $darkgrey;
 	}
 	ol, ul {
-		line-height: 150%;
 		text-align: left;
 		margin: 0 0 0 20px;
 		padding: 0;
@@ -249,7 +292,7 @@ header {
 		padding: 0 0 20px 0;
 		@include mq(tablet){
 	 		width: 45%;
-	 		padding: 0 0 20px 5%;
+	 		padding: 0 5% 20px 0;
 	 	}
 	 	select, textarea, input {
 	 		width: 90%;
@@ -288,6 +331,8 @@ header {
 	.message {
 		width: 100%;
 		font-style: italic;
+		line-height: 150%;
+		font-size: 	12px;
 	}
 }
 #iframeform {
@@ -299,7 +344,7 @@ header {
 	}
 	input, textarea, select {
 		display: block;
-		width: 100%;
+		width: 99%;
 		height: 35px;
 		margin-bottom: 10px;
 		border-radius: 5px;
@@ -329,3 +374,8 @@ header {
 
 
 //Trumps – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+.mission-header {
+	background: url(../img/honeycomb2.png) repeat $orange !important;
+	background-size: 300px !important;
+	background-position: center center !important;
+}
