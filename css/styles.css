@@ -36,11 +36,11 @@ textarea:focus, input:focus {
 a:hover, a:active, a:focus {
   outline: 0; }
 
-p {
-  line-height: 125%; }
+p, ol, ul {
+  line-height: 150%; }
 
 .header-wrapper {
-  max-width: 800px;
+  max-width: 1280px;
   width: 100%;
   padding: 0;
   overflow: hidden;
@@ -51,11 +51,24 @@ p {
       padding: 10px 5%; } }
 
 .section-wrapper {
-  max-width: 800px;
+  max-width: 1280px;
   width: 90%;
-  padding: 60px 5%;
+  padding: 30px 5%;
   overflow: hidden;
   margin: 0 auto; }
+  @media (min-width: 768px) {
+    .section-wrapper {
+      padding: 60px 5%; } }
+
+.section-wrapper2 {
+  max-width: 800px;
+  width: 90%;
+  padding: 30px 5%;
+  overflow: hidden;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .section-wrapper2 {
+      padding: 60px 5%; } }
 
 header {
   transition: box-shadow 0.33s linear;
@@ -99,18 +112,30 @@ header {
 
 #hero {
   margin-top: 80px;
-  background: #f19c3e; }
+  background: url(../img/honeycomb.png) repeat #f19c3e;
+  background-size: 300px;
+  background-position: center center;
+  text-align: center; }
+  #hero h2 {
+    color: #fff;
+    text-shadow: 0px 2px #906301;
+    font-size: 36px;
+    letter-spacing: 1px;
+    word-spacing: 1px; }
+  #hero .homepage {
+    font-size: 24px; }
+    @media (min-width: 768px) {
+      #hero .homepage {
+        font-size: 36px; } }
+    #hero .homepage .yellow {
+      color: #ffff77; }
   #hero .definition {
     text-align: left; }
-    #hero .definition h2 {
-      color: #fff; }
     #hero .definition p {
-      line-height: 150%;
       text-align: left;
       color: #302f30; }
     #hero .definition ol {
       font-size: 1.15em;
-      line-height: 150%;
       text-align: left;
       margin: 0 0 0 20px;
       padding: 0;
@@ -143,25 +168,38 @@ header {
       @media (min-width: 768px) {
         #services ul li {
           width: 47%; } }
-      #services ul li h3 {
-        margin: 10px 0 0 0;
-        color: #f19c3e; }
-      #services ul li img {
-        width: 75px;
-        height: 75px;
+      #services ul li .li-left {
+        display: inline-block;
         float: left;
-        padding: 0 20px 0 0; }
+        width: 20%; }
         @media (min-width: 768px) {
-          #services ul li img {
-            width: 100px;
-            height: 100px; } }
-      #services ul li p {
-        margin: 0;
-        color: #302f30; }
+          #services ul li .li-left {
+            width: 30%; } }
+        #services ul li .li-left img {
+          float: left;
+          padding: 0;
+          width: 100%;
+          height: auto; }
+      #services ul li .li-right {
+        display: inline-block;
+        float: left;
+        width: 75%;
+        padding: 0 0 0 3%; }
+        @media (min-width: 768px) {
+          #services ul li .li-right {
+            width: 65%; } }
+        #services ul li .li-right h3 {
+          margin: 0;
+          color: #f19c3e; }
+        #services ul li .li-right .green {
+          color: #5ac1a0; }
+        #services ul li .li-right p {
+          margin: 0;
+          color: #302f30; }
 
 #bio {
   text-align: center;
-  background: #5ac1a0; }
+  background: url(../img/honeycomb2.png) repeat #5ac1a0; }
   #bio h2 {
     color: #245e4c; }
   #bio .bio-container {
@@ -195,7 +233,8 @@ header {
           float: left; } }
       #bio .bio-container .bio-container-right h3 {
         text-align: center;
-        color: #fff; }
+        color: #fff;
+        margin: 0; }
         @media (min-width: 768px) {
           #bio .bio-container .bio-container-right h3 {
             text-align: left; } }
@@ -203,19 +242,17 @@ header {
         display: inline-block;
         text-align: left;
         width: 100%;
-        line-height: 150%;
         color: #302f30; }
       #bio .bio-container .bio-container-right a {
-        color: #049634; }
+        color: #049634;
+        white-space: nowrap; }
       #bio .bio-container .bio-container-right .fa {
         font-size: 32px;
         color: #bbbbbb; }
 
 #nonprofits p, #contact p, #mission p {
-  line-height: 150%;
   color: #302f30; }
 #nonprofits ol, #nonprofits ul, #contact ol, #contact ul, #mission ol, #mission ul {
-  line-height: 150%;
   text-align: left;
   margin: 0 0 0 20px;
   padding: 0;
@@ -242,7 +279,7 @@ header {
     @media (min-width: 768px) {
       #footer .footer-left {
         width: 45%;
-        padding: 0 0 20px 5%; } }
+        padding: 0 5% 20px 0; } }
     #footer .footer-left select, #footer .footer-left textarea, #footer .footer-left input {
       width: 90%;
       max-width: 600px;
@@ -274,7 +311,9 @@ header {
   background: #bbbbbb; }
   #quote .message {
     width: 100%;
-    font-style: italic; }
+    font-style: italic;
+    line-height: 150%;
+    font-size: 12px; }
 
 #iframeform label {
   display: block;
@@ -283,7 +322,7 @@ header {
   color: #5ac1a0; }
 #iframeform input, #iframeform textarea, #iframeform select {
   display: block;
-  width: 100%;
+  width: 99%;
   height: 35px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -302,5 +341,10 @@ header {
   color: white; }
 #iframeform a {
   color: #049634; }
+
+.mission-header {
+  background: url(../img/honeycomb2.png) repeat #f19c3e !important;
+  background-size: 300px !important;
+  background-position: center center !important; }
 
 /*# sourceMappingURL=styles.css.map */
