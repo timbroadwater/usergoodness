@@ -26,8 +26,7 @@ a {
 	overflow: hidden;
     margin: 0 auto; 
     @include mq(tablet){
-		width: 90%;
-		padding: 10px 5%;
+		padding: 10px 0;
 	} 
 }
 .section-wrapper {
@@ -332,7 +331,11 @@ header {
 	}
 	.fa {
 		font-size: 32px;
-		color: $lightgrey;
+		color: $green;
+		cursor: pointer;
+		&:hover {
+			color: $orange;
+		}
 	}
 }
 #quote {

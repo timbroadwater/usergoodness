@@ -53,8 +53,7 @@ a {
   margin: 0 auto; }
   @media (min-width: 768px) {
     .header-wrapper {
-      width: 90%;
-      padding: 10px 5%; } }
+      padding: 10px 0; } }
 
 .section-wrapper {
   max-width: 1280px;
@@ -314,7 +313,10 @@ header {
       color: #302f30; }
   #footer .fa {
     font-size: 32px;
-    color: #bbbbbb; }
+    color: #5ac1a0;
+    cursor: pointer; }
+    #footer .fa:hover {
+      color: #f19c3e; }
 
 #quote {
   text-align: center;
