@@ -13,6 +13,12 @@ p, ol, ul {
 }
 
 //Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+a {
+	color: $greenlink;
+}
+.error {
+	color: red;
+}
 .header-wrapper {
 	max-width: 1280px;
 	width: 100%;
@@ -22,7 +28,7 @@ p, ol, ul {
     @include mq(tablet){
 		width: 90%;
 		padding: 10px 5%;
-	}
+	} 
 }
 .section-wrapper {
 	max-width: 1280px;

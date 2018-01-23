@@ -39,6 +39,12 @@ a:hover, a:active, a:focus {
 p, ol, ul {
   line-height: 150%; }
 
+a {
+  color: #049634; }
+
+.error {
+  color: red; }
+
 .header-wrapper {
   max-width: 1280px;
   width: 100%;
