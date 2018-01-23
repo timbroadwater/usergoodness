@@ -13,6 +13,12 @@ p, ol, ul {
 }
 
 //Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+a {
+	color: $greenlink;
+}
+.error {
+	color: red;
+}
 .header-wrapper {
 	max-width: 1280px;
 	width: 100%;
@@ -20,8 +26,12 @@ p, ol, ul {
 	overflow: hidden;
     margin: 0 auto; 
     @include mq(tablet){
-		width: 90%;
-		padding: 10px 5%;
+		padding: 10px 0;
+	} 
+	h1 {
+		a {
+			border: none;
+		}
 	}
 }
 .section-wrapper {
@@ -223,7 +233,11 @@ header {
 				width: 100%;
 				max-width: 150px;
 				height: auto;
-				border-radius: 100px;
+				// circle border-radius: 100px; 
+				// -webkit-clip-path: polygon(23% 9%, 77% 9%, 100% 50%, 77% 90%, 23% 90%, 0 50%);
+				// clip-path: polygon(23% 9%, 77% 9%, 100% 50%, 77% 90%, 23% 90%, 0 50%);
+				-webkit-clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+				clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
 			}
 		}
 		.bio-container-right {
@@ -326,7 +340,11 @@ header {
 	}
 	.fa {
 		font-size: 32px;
-		color: $lightgrey;
+		color: $green;
+		cursor: pointer;
+		&:hover {
+			color: $orange;
+		}
 	}
 }
 #quote {

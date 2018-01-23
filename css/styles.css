@@ -39,6 +39,12 @@ a:hover, a:active, a:focus {
 p, ol, ul {
   line-height: 150%; }
 
+a {
+  color: #049634; }
+
+.error {
+  color: red; }
+
 .header-wrapper {
   max-width: 1280px;
   width: 100%;
@@ -47,8 +53,9 @@ p, ol, ul {
   margin: 0 auto; }
   @media (min-width: 768px) {
     .header-wrapper {
-      width: 90%;
-      padding: 10px 5%; } }
+      padding: 10px 0; } }
+  .header-wrapper h1 a {
+    border: none; }
 
 .section-wrapper {
   max-width: 1280px;
@@ -226,7 +233,8 @@ header {
         width: 100%;
         max-width: 150px;
         height: auto;
-        border-radius: 100px; }
+        -webkit-clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+        clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%); }
     #bio .bio-container .bio-container-right {
       display: inline-block;
       width: 100%;
@@ -308,7 +316,10 @@ header {
       color: #302f30; }
   #footer .fa {
     font-size: 32px;
-    color: #bbbbbb; }
+    color: #5ac1a0;
+    cursor: pointer; }
+    #footer .fa:hover {
+      color: #f19c3e; }
 
 #quote {
   text-align: center;
