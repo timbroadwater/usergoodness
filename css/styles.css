@@ -1,21 +1,14 @@
-/* line 9, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_ui.scss */
 body {
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Roboto', sans-serif; }
 
-/* line 12, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_ui.scss */
 h1, h2, h3 {
-  font-family: 'Roboto Slab', serif;
-}
+  font-family: 'Roboto Slab', serif; }
 
-/* line 1, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_reset.scss */
 html, body, section, form, nav, ul {
   display: block;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 6, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_reset.scss */
 .wrap {
   width: 90%;
   margin-top: 0;
@@ -24,691 +17,342 @@ html, body, section, form, nav, ul {
   margin-left: auto;
   display: block;
   height: auto;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-/* line 16, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_reset.scss */
 video {
-  display: block;
-}
+  display: block; }
 
 /* For IE9 */
-/* line 21, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_reset.scss */
 a img {
-  border: none;
-}
+  border: none; }
 
 /* For Chrome & Firefox */
-/* line 26, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_reset.scss */
 *:focus {
-  outline: 0;
-}
+  outline: 0; }
 
-/* line 29, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_reset.scss */
 textarea:focus, input:focus {
-  outline: 0;
-}
+  outline: 0; }
 
-/* line 32, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/_partials/_reset.scss */
 a:hover, a:active, a:focus {
-  outline: 0;
-}
+  outline: 0; }
 
-/* line 11, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 p, ol, ul {
-  line-height: 150%;
-}
+  line-height: 150%; }
 
-/* line 16, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 a {
-  color: #049634;
-}
+  color: #049634; }
 
-/* line 19, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 .error {
-  color: red;
-}
+  color: red; }
 
-/* header */
-/* line 25, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-  top: 0;
-}
-
-/* line 34, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 .header-wrapper {
   max-width: 1280px;
   width: 100%;
-  margin: 0 auto;
-}
-
-/* line 40, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-header img {
-  max-width: 250px;
-  width: 100%;
-  height: auto;
-  float: left;
-  display: inline-block;
-}
-
-/* line 48, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header ul {
-  margin: 0;
   padding: 0;
-  list-style: none;
   overflow: hidden;
-  background-color: #fff;
-  line-height: 100%;
-}
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .header-wrapper {
+      padding: 10px 0; } }
+  .header-wrapper h1 a {
+    border: none; }
 
-/* line 57, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none;
-  font-weight: 900;
-  color: #333;
-  letter-spacing: .02rem;
-}
-
-/* line 67, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header li.last-list-item a {
-  border-right: none;
-}
-
-/* line 71, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
-}
-
-/* line 76, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-/* menu */
-/* line 86, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-}
-
-/* menu icon */
-/* line 94, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-/* line 103, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-/* line 112, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-/* line 123, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-/* line 127, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-/* line 133, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-btn {
-  display: none;
-}
-
-/* line 137, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
-
-/* line 141, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-/* line 145, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-/* line 149, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-/* line 153, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-@media (max-width: 375px) {
-  /* line 159, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  .logo {
-    width: 220px;
-  }
-}
-
-@media (min-width: 820px) {
-  /* line 165, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  .header li {
-    float: left;
-  }
-  /* line 168, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  .header li a {
-    padding: 20px 30px;
-  }
-  /* line 171, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  /* line 176, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  .header .menu-icon {
-    display: none;
-  }
-}
-
-/* line 181, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 .section-wrapper {
   max-width: 1280px;
   width: 90%;
   padding: 30px 5%;
   overflow: hidden;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .section-wrapper {
+      padding: 60px 5%; } }
 
-@media (min-width: 768px) {
-  /* line 181, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  .section-wrapper {
-    padding: 60px 5%;
-  }
-}
-
-/* line 191, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 .section-wrapper2 {
   max-width: 800px;
   width: 90%;
   padding: 30px 5%;
   overflow: hidden;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .section-wrapper2 {
+      padding: 60px 5%; } }
 
-@media (min-width: 768px) {
-  /* line 191, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  .section-wrapper2 {
-    padding: 60px 5%;
-  }
-}
+header {
+  transition: box-shadow 0.33s linear;
+  overflow: hidden;
+  position: fixed;
+  z-index: 2;
+  background: #fff;
+  border-bottom: 1px solid #bbbbbb;
+  text-align: center;
+  top: 0;
+  padding: 10px 0;
+  width: 100%; }
+  @media (min-width: 768px) {
+    header {
+      padding: 10px 5%;
+      width: 90%; } }
+  header h1 {
+    display: block;
+    margin: 0; }
+    @media (min-width: 768px) {
+      header h1 {
+        float: left;
+        display: inline-block; } }
+    header h1 img {
+      max-width: 250px;
+      width: 100%;
+      height: auto; }
+  header ul {
+    margin: 5px auto 0 auto;
+    list-style-type: none;
+    overflow: hidden; }
+    @media (min-width: 768px) {
+      header ul {
+        float: right; } }
+    header ul li {
+      display: inline-block;
+      padding: 0 3px; }
+      @media (min-width: 768px) {
+        header ul li {
+          padding: 0 10px; } }
 
-/* line 202, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 #hero {
-  margin-top: 56px;
+  margin-top: 80px;
   background: url(../img/honeycomb.png) repeat #f19c3e;
   background-size: 300px;
   background-position: center center;
-  text-align: center;
-}
-
-/* line 208, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#hero h2 {
-  color: #fff;
-  text-shadow: 0px 2px #906301;
-  font-size: 36px;
-}
-
-/* line 213, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#hero .homepage {
-  font-size: 24px;
-}
-
-@media (min-width: 768px) {
-  /* line 213, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  text-align: center; }
+  #hero h2 {
+    color: #fff;
+    text-shadow: 0px 2px #906301;
+    font-size: 36px; }
   #hero .homepage {
-    font-size: 36px;
-  }
-}
+    font-size: 24px; }
+    @media (min-width: 768px) {
+      #hero .homepage {
+        font-size: 36px; } }
+    #hero .homepage .yellow {
+      color: #ffff77; }
+  #hero .definition {
+    text-align: left; }
+    #hero .definition p {
+      text-align: left;
+      color: #302f30; }
+    #hero .definition ol {
+      font-size: 1.15em;
+      text-align: left;
+      margin: 0 0 0 20px;
+      padding: 0;
+      color: #302f30; }
+      #hero .definition ol li {
+        margin: 0;
+        padding: 0 0 20px 0; }
 
-/* line 218, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#hero .homepage .yellow {
-  color: #ffff77;
-}
-
-/* line 222, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#hero .definition {
-  text-align: left;
-}
-
-/* line 224, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#hero .definition p {
-  text-align: left;
-  color: #302f30;
-}
-
-/* line 228, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#hero .definition ol {
-  font-size: 1.15em;
-  text-align: left;
-  margin: 0 0 0 20px;
-  padding: 0;
-  color: #302f30;
-}
-
-/* line 234, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#hero .definition ol li {
-  margin: 0;
-  padding: 0 0 20px 0;
-}
-
-/* line 243, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 #process .process-block {
   margin: 0 0 30px 0;
   display: block;
   overflow: hidden;
-  height: auto;
-}
+  height: auto; }
+  #process .process-block .process-left, #process .process-block .process-right {
+    width: 50%;
+    float: left;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    height: auto; }
+    #process .process-block .process-left img, #process .process-block .process-right img {
+      max-width: 360px;
+      width: 100%;
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px; }
 
-/* line 248, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#process .process-block .process-left, #process .process-block .process-right {
-  width: 50%;
-  float: left;
-  text-align: left;
-  display: block;
-  overflow: hidden;
-  height: auto;
-}
-
-/* line 255, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#process .process-block .process-left img, #process .process-block .process-right img {
-  max-width: 360px;
-  width: 100%;
-  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 10px;
-}
-
-/* line 265, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 #services {
-  text-align: center;
-}
+  text-align: center; }
+  #services h2 {
+    margin-bottom: 50px;
+    color: #5ac1a0; }
+  #services ul {
+    list-style-type: none;
+    width: 100%;
+    overflow: hidden;
+    text-align: left; }
+    #services ul li:nth-child(odd) {
+      padding-right: 0; }
+      @media (min-width: 768px) {
+        #services ul li:nth-child(odd) {
+          padding-right: 6%; } }
+    #services ul li {
+      width: 100%;
+      display: inline-block;
+      float: left;
+      text-align: left;
+      padding: 0 0 50px 0; }
+      @media (min-width: 768px) {
+        #services ul li {
+          width: 47%; } }
+      #services ul li .li-left {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        text-align: center; }
+        @media (min-width: 768px) {
+          #services ul li .li-left {
+            width: 30%; } }
+        #services ul li .li-left img {
+          padding: 0;
+          width: 100%;
+          height: auto;
+          max-width: 200px;
+          margin: 0 auto 20px auto; }
+          @media (min-width: 768px) {
+            #services ul li .li-left img {
+              margin: 0; } }
+      #services ul li .li-right {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        padding: 0; }
+        @media (min-width: 768px) {
+          #services ul li .li-right {
+            width: 65%;
+            padding: 0 0 0 3%; } }
+        #services ul li .li-right h3 {
+          margin: 0;
+          color: #f19c3e; }
+        #services ul li .li-right .green {
+          color: #5ac1a0; }
+        #services ul li .li-right p {
+          margin: 0;
+          color: #302f30; }
 
-/* line 267, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services h2 {
-  margin-bottom: 50px;
-  color: #5ac1a0;
-}
-
-/* line 271, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul {
-  list-style-type: none;
-  width: 100%;
-  overflow: hidden;
-  text-align: left;
-}
-
-/* line 276, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul li:nth-child(odd) {
-  padding-right: 0;
-}
-
-@media (min-width: 768px) {
-  /* line 276, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #services ul li:nth-child(odd) {
-    padding-right: 6%;
-  }
-}
-
-/* line 282, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul li {
-  width: 100%;
-  display: inline-block;
-  float: left;
-  text-align: left;
-  padding: 0 0 50px 0;
-}
-
-@media (min-width: 768px) {
-  /* line 282, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #services ul li {
-    width: 47%;
-  }
-}
-
-/* line 291, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul li .li-left {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  /* line 291, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #services ul li .li-left {
-    width: 30%;
-  }
-}
-
-/* line 299, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul li .li-left img {
-  padding: 0;
-  width: 100%;
-  height: auto;
-  max-width: 200px;
-  margin: 0 auto 20px auto;
-}
-
-@media (min-width: 768px) {
-  /* line 299, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #services ul li .li-left img {
-    margin: 0;
-  }
-}
-
-/* line 310, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul li .li-right {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  padding: 0;
-}
-
-@media (min-width: 768px) {
-  /* line 310, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #services ul li .li-right {
-    width: 65%;
-    padding: 0 0 0 3%;
-  }
-}
-
-/* line 319, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul li .li-right h3 {
-  margin: 0;
-  color: #f19c3e;
-}
-
-/* line 323, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul li .li-right .green {
-  color: #5ac1a0;
-}
-
-/* line 326, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#services ul li .li-right p {
-  margin: 0;
-  color: #302f30;
-}
-
-/* line 334, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 #bio {
   text-align: center;
-  background: url(../img/honeycomb2.png) repeat #5ac1a0;
-}
-
-/* line 337, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio h2 {
-  color: #245e4c;
-}
-
-/* line 340, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio .bio-container {
-  padding: 20px 0;
-  overflow: hidden;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  /* line 340, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  background: url(../img/honeycomb2.png) repeat #5ac1a0; }
+  #bio h2 {
+    color: #245e4c; }
   #bio .bio-container {
-    text-align: left;
-  }
-}
+    padding: 20px 0;
+    overflow: hidden;
+    text-align: center; }
+    @media (min-width: 768px) {
+      #bio .bio-container {
+        text-align: left; } }
+    #bio .bio-container .bio-container-left {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      float: initial; }
+      @media (min-width: 768px) {
+        #bio .bio-container .bio-container-left {
+          width: 30%;
+          float: left; } }
+      #bio .bio-container .bio-container-left img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        -webkit-clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+        clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%); }
+    #bio .bio-container .bio-container-right {
+      display: inline-block;
+      width: 100%;
+      float: initial; }
+      @media (min-width: 768px) {
+        #bio .bio-container .bio-container-right {
+          width: 70%;
+          float: left; } }
+      #bio .bio-container .bio-container-right h3 {
+        text-align: center;
+        color: #fff;
+        margin: 0; }
+        @media (min-width: 768px) {
+          #bio .bio-container .bio-container-right h3 {
+            text-align: left; } }
+      #bio .bio-container .bio-container-right p {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        color: #302f30; }
+      #bio .bio-container .bio-container-right a {
+        color: #049634;
+        white-space: nowrap; }
+      #bio .bio-container .bio-container-right .fa {
+        font-size: 32px;
+        color: #bbbbbb; }
 
-/* line 347, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio .bio-container .bio-container-left {
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-  float: initial;
-}
-
-@media (min-width: 768px) {
-  /* line 347, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #bio .bio-container .bio-container-left {
-    width: 30%;
-    float: left;
-  }
-}
-
-/* line 356, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio .bio-container .bio-container-left img {
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  -webkit-clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
-  clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
-}
-
-/* line 367, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio .bio-container .bio-container-right {
-  display: inline-block;
-  width: 100%;
-  float: initial;
-}
-
-@media (min-width: 768px) {
-  /* line 367, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #bio .bio-container .bio-container-right {
-    width: 70%;
-    float: left;
-  }
-}
-
-/* line 375, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio .bio-container .bio-container-right h3 {
-  text-align: center;
-  color: #fff;
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-  /* line 375, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #bio .bio-container .bio-container-right h3 {
-    text-align: left;
-  }
-}
-
-/* line 383, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio .bio-container .bio-container-right p {
-  display: inline-block;
-  text-align: left;
-  width: 100%;
-  color: #302f30;
-}
-
-/* line 389, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio .bio-container .bio-container-right a {
-  color: #049634;
-  white-space: nowrap;
-}
-
-/* line 393, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#bio .bio-container .bio-container-right .fa {
-  font-size: 32px;
-  color: #bbbbbb;
-}
-
-/* line 401, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 #nonprofits p, #contact p, #mission p {
-  color: #302f30;
-}
-
-/* line 404, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  color: #302f30; }
 #nonprofits ol, #nonprofits ul, #contact ol, #contact ul, #mission ol, #mission ul {
   text-align: left;
   margin: 0 0 0 20px;
   padding: 0;
-  color: #302f30;
-}
-
-/* line 409, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#nonprofits ol li, #nonprofits ul li, #contact ol li, #contact ul li, #mission ol li, #mission ul li {
-  margin: 0;
-  padding: 0 0 20px 0;
-}
-
-/* line 414, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  color: #302f30; }
+  #nonprofits ol li, #nonprofits ul li, #contact ol li, #contact ul li, #mission ol li, #mission ul li {
+    margin: 0;
+    padding: 0 0 20px 0; }
 #nonprofits h2, #contact h2, #mission h2 {
-  color: #5ac1a0;
-}
-
-/* line 417, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  color: #5ac1a0; }
 #nonprofits h3, #contact h3, #mission h3 {
-  color: #f19c3e;
-}
+  color: #f19c3e; }
 
-/* line 422, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 #footer {
-  text-align: center;
-}
-
-/* line 424, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#footer h2 {
-  color: #f19c3e;
-}
-
-/* line 427, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#footer a {
-  color: #049634;
-}
-
-/* line 430, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#footer .footer-left {
-  text-align: left;
-  width: 100%;
-  float: left;
-  padding: 0 0 20px 0;
-}
-
-@media (min-width: 768px) {
-  /* line 430, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  text-align: center; }
+  #footer h2 {
+    color: #f19c3e; }
+  #footer a {
+    color: #049634; }
   #footer .footer-left {
-    width: 45%;
-    padding: 0 5% 20px 0;
-  }
-}
-
-/* line 439, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#footer .footer-left select, #footer .footer-left textarea, #footer .footer-left input {
-  width: 90%;
-  max-width: 600px;
-  min-height: 35px;
-  border: 1px solid #000;
-  margin: 0 0 10px 0;
-  resize: none;
-  display: block;
-  float: left;
-}
-
-/* line 450, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#footer .footer-right {
-  width: 100%;
-  float: left;
-  padding: 0 0 20px 0;
-}
-
-@media (min-width: 768px) {
-  /* line 450, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-  #footer .footer-right {
     text-align: left;
-  }
-}
-
-@media (min-width: 768px) {
-  /* line 450, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+    width: 100%;
+    float: left;
+    padding: 0 0 20px 0; }
+    @media (min-width: 768px) {
+      #footer .footer-left {
+        width: 45%;
+        padding: 0 5% 20px 0; } }
+    #footer .footer-left select, #footer .footer-left textarea, #footer .footer-left input {
+      width: 90%;
+      max-width: 600px;
+      min-height: 35px;
+      border: 1px solid #000;
+      margin: 0 0 10px 0;
+      resize: none;
+      display: block;
+      float: left; }
   #footer .footer-right {
-    width: 45%;
-    padding: 0 0 20px 5%;
-  }
-}
+    width: 100%;
+    float: left;
+    padding: 0 0 20px 0; }
+    @media (min-width: 768px) {
+      #footer .footer-right {
+        text-align: left; } }
+    @media (min-width: 768px) {
+      #footer .footer-right {
+        width: 45%;
+        padding: 0 0 20px 5%; } }
+    #footer .footer-right p {
+      color: #302f30; }
+  #footer .fa {
+    font-size: 32px;
+    color: #5ac1a0;
+    cursor: pointer; }
+    #footer .fa:hover {
+      color: #f19c3e; }
 
-/* line 461, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#footer .footer-right p {
-  color: #302f30;
-}
-
-/* line 465, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#footer .fa {
-  font-size: 32px;
-  color: #5ac1a0;
-  cursor: pointer;
-}
-
-/* line 469, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#footer .fa:hover {
-  color: #f19c3e;
-}
-
-/* line 474, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 #quote {
   text-align: center;
-  background: #bbbbbb;
-}
+  background: #bbbbbb; }
+  #quote .message {
+    width: 100%;
+    font-style: italic;
+    line-height: 150%;
+    font-size: 12px; }
 
-/* line 477, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
-#quote .message {
-  width: 100%;
-  font-style: italic;
-  line-height: 150%;
-  font-size: 12px;
-}
-
-/* line 485, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 #iframeform label {
   display: block;
   font-weight: bold;
   font-size: 14px;
-  color: #5ac1a0;
-}
-
-/* line 491, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  color: #5ac1a0; }
 #iframeform input, #iframeform textarea, #iframeform select {
   display: block;
   width: 99%;
@@ -717,35 +361,23 @@ header img {
   border-radius: 5px;
   border: 1px solid #515151;
   font-family: Roboto, Arial, sans;
-  font-size: 12px;
-}
-
-/* line 501, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  font-size: 12px; }
 #iframeform textarea {
   height: 60px;
-  resize: none;
-}
-
-/* line 505, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  resize: none; }
 #iframeform input[type="submit"] {
   max-width: 150px;
   border-radius: 50px;
   border: none;
   font-weight: bold;
   background: green;
-  color: white;
-}
-
-/* line 513, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
+  color: white; }
 #iframeform a {
-  color: #049634;
-}
+  color: #049634; }
 
-/* line 523, /Library/WebServer/Documents/usergoodness/usergoodness.github.io/scss/styles.scss */
 .mission-header {
   background: url(../img/honeycomb2.png) repeat #f19c3e !important;
   background-size: 300px !important;
-  background-position: center center !important;
-}
+  background-position: center center !important; }
 
-/*# sourceMappingURL=../css/styles.map */
+/*# sourceMappingURL=styles.css.map */
