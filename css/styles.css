@@ -54,10 +54,14 @@ a {
   z-index: 3;
   top: 0; }
 
+.header h1 {
+  margin: 0; }
+
 .header-wrapper {
   max-width: 1280px;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 header img {
   max-width: 250px;
@@ -80,21 +84,22 @@ header img {
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
   font-weight: 900;
-  color: #333;
+  color: #5ac1a0;
   letter-spacing: .02rem; }
 
-.header li.last-list-item a {
+#header > div > ul > li:nth-child(4) > a {
   border-right: none; }
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #f4f4f4; }
+  background-color: #5ac1a0;
+  color: #fff; }
 
 .header .logo {
   display: block;
   float: left;
   font-size: 2em;
-  padding: 10px 20px;
+  padding: 10px 0;
   text-decoration: none; }
 
 /* menu */
